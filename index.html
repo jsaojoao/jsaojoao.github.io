@@ -1,101 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Academic Profile</title>
-  <style>
-    :root {
-      --cream: #f5f2e9;
-      --navy: #0a1a3c;
-      --purple: #3b1e54;
-    }
+  <meta charset="UTF-8">
+  <!--
+    The <meta> tag above ensures correct character encoding.
+    The viewport tag below makes the page display properly on phones/tablets.
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- The title appears in the browser tab -->
+  <title>[My name]</title>
+
+  <style>
+    /* 
+      Basic page styling.
+      You can change fonts, colors, margins here.
+    */
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      background: var(--cream);
-      color: var(--navy);
-    }
-
-    header {
-      background: var(--navy);
-      color: var(--cream);
-      padding: 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav a {
-      color: var(--cream);
-      margin-left: 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
+      max-width: 800px;        /* Limits how wide the text becomes */
+      margin: 2rem auto;       /* Centers the content */
       padding: 1rem;
+      line-height: 1.6;        /* Adds comfortable spacing between lines */
+    }
+
+    h1 {
+      margin-bottom: 0.5rem;   /* Small spacing under your name */
     }
 
     h2 {
-      color: var(--purple);
+      margin-top: 2rem;        /* Space above section titles like “Publications” */
     }
 
-    .pub-item {
-      margin-bottom: 1rem;
-      padding-left: 1rem;
-      border-left: 4px solid var(--purple);
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 0;
-      margin-top: 3rem;
-      background: var(--navy);
-      color: var(--cream);
+    ul {
+      padding-left: 1.2rem;    /* Indent for bullet list */
     }
   </style>
-  <script>
-    function switchLang(lang) {
-      document.querySelectorAll('[data-en], [data-alt]').forEach(el => {
-        el.textContent = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-alt');
-      });
-    }
-  </script>
 </head>
+
 <body>
-  <header>
-    <h1 data-en="My Academic Profile" data-alt="Mi Perfil Académico">My Academic Profile</h1>
-    <nav>
-      <a href="#" onclick="switchLang('en')">EN</a>
-      <a href="#" onclick="switchLang('alt')">ALT</a>
-    </nav>
-  </header>
 
-  <div class="container">
-    <section>
-      <h2 data-en="About Me" data-alt="Sobre Mí">About Me</h2>
-      <p data-en="I am a researcher interested in ..." data-alt="Soy un investigador interesado en ...">I am a researcher interested in ...</p>
-    </section>
+  <!-- Main header with your name -->
+  <h1>[My name]</h1>
 
-    <section>
-      <h2 data-en="Publications" data-alt="Publicaciones">Publications</h2>
-      <div class="pub-item">
-        <strong data-en="Title of Paper 1" data-alt="Título del Artículo 1">Title of Paper 1</strong><br />
-        <span data-en="Authors, Journal, Year" data-alt="Autores, Revista, Año">Authors, Journal, Year</span>
-      </div>
-      <div class="pub-item">
-        <strong data-en="Title of Paper 2" data-alt="Título del Artículo 2">Title of Paper 2</strong><br />
-        <span data-en="Authors, Journal, Year" data-alt="Autores, Revista, Año">Authors, Journal, Year</span>
-      </div>
-    </section>
-  </div>
+  <!-- Short paragraph about you -->
+  <p>
+    This is a short paragraph about me. I am interested in research areas such as...
+    (Write a few sentences about yourself here.)
+  </p>
 
-  <footer>
-    <p data-en="© 2025 My Name" data-alt="© 2025 Mi Nombre">© 2025 My Name</p>
-  </footer>
+  <!-- Section for publications -->
+  <h2>Publications</h2>
+
+  <!-- Unordered list of your publications -->
+  <ul>
+    <li><strong>Title of Paper 1</strong>, Authors, Journal, Year.</li>
+    <li><strong>Title of Paper 2</strong>, Authors, Journal, Year.</li>
+    <li><strong>Title of Paper 3</strong>, Authors, Journal, Year.</li>
+  </ul>
+
 </body>
 </html>
