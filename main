@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Profile</title>
+  <style>
+    :root {
+      --cream: #f5f2e9;
+      --navy: #0a1a3c;
+      --purple: #3b1e54;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: var(--cream);
+      color: var(--navy);
+    }
+
+    header {
+      background: var(--navy);
+      color: var(--cream);
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--cream);
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    h2 {
+      color: var(--purple);
+    }
+
+    .pub-item {
+      margin-bottom: 1rem;
+      padding-left: 1rem;
+      border-left: 4px solid var(--purple);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 3rem;
+      background: var(--navy);
+      color: var(--cream);
+    }
+  </style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('[data-en], [data-alt]').forEach(el => {
+        el.textContent = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-alt');
+      });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1 data-en="My Academic Profile" data-alt="Mi Perfil Académico">My Academic Profile</h1>
+    <nav>
+      <a href="#" onclick="switchLang('en')">EN</a>
+      <a href="#" onclick="switchLang('alt')">ALT</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2 data-en="About Me" data-alt="Sobre Mí">About Me</h2>
+      <p data-en="I am a researcher interested in ..." data-alt="Soy un investigador interesado en ...">I am a researcher interested in ...</p>
+    </section>
+
+    <section>
+      <h2 data-en="Publications" data-alt="Publicaciones">Publications</h2>
+      <div class="pub-item">
+        <strong data-en="Title of Paper 1" data-alt="Título del Artículo 1">Title of Paper 1</strong><br />
+        <span data-en="Authors, Journal, Year" data-alt="Autores, Revista, Año">Authors, Journal, Year</span>
+      </div>
+      <div class="pub-item">
+        <strong data-en="Title of Paper 2" data-alt="Título del Artículo 2">Title of Paper 2</strong><br />
+        <span data-en="Authors, Journal, Year" data-alt="Autores, Revista, Año">Authors, Journal, Year</span>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p data-en="© 2025 My Name" data-alt="© 2025 Mi Nombre">© 2025 My Name</p>
+  </footer>
+</body>
+</html>
